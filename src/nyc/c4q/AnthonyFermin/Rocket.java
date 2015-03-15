@@ -6,15 +6,15 @@ package nyc.c4q.AnthonyFermin;
 public class Rocket {
 
     public static void drawRocket(int size){
-        drawRocketTopBottom(size);
-        drawRocketDivider(size);
-        drawRocketUpwardTriangles(size);
-        drawRocketDownwardTriangles(size);
-        drawRocketDivider(size);
-        drawRocketDownwardTriangles(size);
-        drawRocketUpwardTriangles(size);
-        drawRocketDivider(size);
-        drawRocketTopBottom(size);
+        drawTopBottom(size);
+        drawDivider(size);
+        drawBodyUpwardTriangles(size);
+        drawBodyDownwardTriangles(size);
+        drawDivider(size);
+        drawBodyDownwardTriangles(size);
+        drawBodyUpwardTriangles(size);
+        drawDivider(size);
+        drawTopBottom(size);
     }
 
     public static void printConeSpaces(int num){
@@ -25,7 +25,7 @@ public class Rocket {
 
     }
 
-    public static void drawRocketTopBottom(int size){
+    public static void drawTopBottom(int size){
         int numOfRows = ((size - 1) * 2) + 1; //number of rows in the cone piece of the rocket
 
         for(int i = 0; i < numOfRows; i++){
@@ -43,7 +43,7 @@ public class Rocket {
         }
     }
 
-    public static void drawRocketDivider(int size){
+    public static void drawDivider(int size){
         System.out.print("+");
 
         for(int i = 0; i < size; i++){
@@ -54,7 +54,7 @@ public class Rocket {
 
     }
 
-    public static void drawRocketUpwardTriangles(int size){
+    public static void drawBodyUpwardTriangles(int size){
 
         //this loop creates body segment with triangle peaks oriented upward
         for(int i = 0; i < size;i++){
@@ -87,7 +87,7 @@ public class Rocket {
         }
 
     }
-    public static void drawRocketDownwardTriangles(int size){
+    public static void drawBodyDownwardTriangles(int size){
         //this loop creates body segment with triangle peaks oriented downward
         for(int i = 0; i < size; i++){
             System.out.print("|");
